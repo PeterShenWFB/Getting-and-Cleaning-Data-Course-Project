@@ -48,7 +48,9 @@ yData[, 1] <- activityType[yData[, 1], 2]
 # 4. Appropriately labels the data set with descriptive variable names.
 
 # add column header names to xData
-names(xData) <- features[featuresNeeded, 2]
+fnames <- features[featuresNeeded, 2]
+fnames <- gsub("[-()]", "", fnames)
+names(xData) <- fnames
 # add column header name to yData
 names(yData) <- "activity"
 # add column header name to subjectData
@@ -65,4 +67,4 @@ library(plyr)
 averages <- ddply(sensorData, .(subject, activity), function(x) colMeans(x[, 1:66]))
 
 # write out to tidy_average.txt
-write.table(averages, "tidy_averages.txt", row.name=FALSE)
+write.table(averages, "tidy_averages.txt", row.name = FALSE, quote = FALSE)
