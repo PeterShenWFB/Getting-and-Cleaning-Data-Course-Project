@@ -1,13 +1,13 @@
-## Code Book
+# Code Book
 
 This code book summarizes the result data variables of tidy_averages.txt.
 
-# First two columns - Subject and Activity
+## First two columns - Subject and Activity
 
 subject - The ID of the subject participated in the test.
 activity - The types of activity performed by the subject.  There are LAYING, STANDING, WALKING, WALKING_DOWNSTAIRS, WALKKING_UPPERSTAIRS, and SITTING.
 
-# Measurement variables
+## Measurement variables
 
 There are 66 measurements.
 
